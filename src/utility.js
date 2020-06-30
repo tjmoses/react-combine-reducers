@@ -1,4 +1,6 @@
 import '@babel/polyfill';
+import _ from 'lodash';
+
 export const combineReducers = reducers => {
 	const reducerKeys = Object.keys(reducers);
 	const reducerValues = Object.values(reducers);
@@ -24,7 +26,7 @@ export const combineReducers = reducers => {
 					action
 				);
 				hasStateChanged =
-					hasStateChanged || nextStateForCurrentKey !== prevStateForCurrentKey;
+					hasStateChanged || !_.isEqual(nextStateForCurrentKey, prevStateForCurrentKey);
 				newState[currentKey] = nextStateForCurrentKey;
 			}
 			return hasStateChanged ? newState : state;

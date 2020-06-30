@@ -25,7 +25,8 @@
   },
   "homepage": "https://github.com/ankita1010/react-combine-reducers#readme",
   "dependencies": {
-    "@babel/polyfill": "^7.7.0"
+    "@babel/polyfill": "^7.7.0",
+    "lodash": "^4.17.15"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.4",
